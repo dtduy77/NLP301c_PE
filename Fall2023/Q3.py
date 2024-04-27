@@ -1,7 +1,7 @@
 import re
 from nltk.probability import FreqDist
 def shorten(text, n):
-
+    assert n > 0, 'n must be a positive integer'
     # Tokenize the text into words
     words = re.findall(r'\b\w+\b', text)
 
@@ -19,5 +19,5 @@ def shorten(text, n):
 
 text = "Write a function shorten(text,n) to process a text, omitting the n most frequently occurring words of the text. How readable is it?"
 n = 4
-shortened_text = shorten(text, 4)
+shortened_text = shorten(text, n)
 print(shortened_text)

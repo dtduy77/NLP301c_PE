@@ -13,5 +13,6 @@ def tokenize_sentences_and_words(text: str):
 text = "Joe waited for the train. The train was late. Mary and Samantha took the bus. I looked for Mary and Samantha at the bus station."
 print('Original text:', text)
 tokenized_sentences = tokenize_sentences_and_words(text)
+# print(tokenized_sentences)
 for sentence in tokenized_sentences:
     print(sentence)

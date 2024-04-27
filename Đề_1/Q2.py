@@ -16,7 +16,7 @@ def find_four_letter_words(text):
     List[str]
         A list of all four-letter words in the given text.
     """
-    four_letter_words = [word.lower() for word in text if len(word) == 4 and word.isalpha()]
+    four_letter_words = [word for word in text if len(word) == 4 and word.isalpha()]
     return four_letter_words
 
 # Download the Chat Corpus (text5)
@@ -28,7 +28,7 @@ four_letter_words = find_four_letter_words(chat_corpus)
 
 # Create a frequency distribution
 freq_dist = FreqDist(four_letter_words)
-
+# print(freq_dist.items())
 # Display four-letter words in decreasing order of frequency
 sorted_by_frequency = sorted(freq_dist.items(), key=lambda x: x[1], reverse=True)
 for word, frequency in sorted_by_frequency:

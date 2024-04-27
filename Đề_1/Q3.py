@@ -1,3 +1,4 @@
+import nltk
 from nltk.tokenize import regexp_tokenize
 
 
@@ -18,6 +19,9 @@ def text_split(text: str) -> list:
     return list_word
 
 text = "Joe waited for the train. The train was late. Mary and Samantha took the bus. I looked for Mary and Samantha at the bus station."
+# Cách 2
+string = nltk.word_tokenize(text)
+print(string)
 
 list_word = text_split(text)
 print(list_word)

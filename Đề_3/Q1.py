@@ -1,5 +1,5 @@
 import re
-
+import nltk
 def percent(word: str, text: str) -> float:
     """
     Calculates the percentage of a word in a text.
@@ -13,7 +13,9 @@ def percent(word: str, text: str) -> float:
 
     """
     pattern = r"\b\w+\b"
+    # pattern = r"\b\w+[[']?\w]?\b" # he's
     token = re.findall(pattern, text)
+    print(token)
     total_words = len(token)
     word_count = token.count(word)
     return (word_count / total_words) * 100

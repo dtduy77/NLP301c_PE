@@ -11,5 +11,5 @@ a = re.findall(pattern, text)
 # Print the matches
 print(a)
 
-b = re.findall(r'\b(a|an|the)\b', 'There is an apple on the top of a lunchbox at the room')
+b = re.findall(r'(\ba|\ban|\bthe)\s', 'There is an apple on the top of a lunchbox at the room')
 print(b)
